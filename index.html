@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="css/core.css">
+    <title>Single Page Application</title>
+</head>
+<body>
+    <script src="lib/jquery-2.1.1.js"></script>
+    <script src="lib/knockout-3.2.0.js"></script>
+    <script src="js/module.js"></script>
+
+    <div id="centeredMainDiv">
+        <div id="header" style="clear: both; float: left;"></div>
+        <div id="navigation"></div>
+        <div id="main"></div>
+    </div>
+
+    <script>
+        $(function(){
+            Module.loadHtml('header','header')
+            Module.loadHtml('navigation', 'navigation')
+        });
+    </script>
+</body>
+</html>

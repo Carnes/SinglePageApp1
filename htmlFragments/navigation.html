@@ -1,0 +1,16 @@
+<div id="navigationTemplate" data-bind="visible: true" style="display: none;">
+    <ul data-bind="foreach: items">
+        <li>
+            <span data-bind="text: text, click: $root.navTo"></span>
+        </li>
+    </ul>
+</div>
+
+<script>
+    (function(){
+        var s = $.getScript('js/navigation.js', function(){
+            ko.applyBindings(Navigation, $('#navigationTemplate').get(0));
+            Navigation.navTo(Navigation.items()[0]);
+        });
+    })();
+</script>

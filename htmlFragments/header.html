@@ -1,0 +1,11 @@
+<div id="headerTemplate" data-bind="visible: true" style="display: none;">
+    <h2>Welcome to this example Single Page Application</h2>
+    <h4>This is just me messing around with jQuery and knockout to create lazy loading modules.</h4>
+</div>
+<script>
+    (function(){
+        var s = $.getScript('js/header.js', function(){
+            ko.applyBindings(Landing, $('#headerTemplate').get(0));
+        });
+    })();
+</script>
