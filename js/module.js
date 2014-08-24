@@ -17,12 +17,3 @@ var Module = (function(){
 
     return self;
 })();
-
-
-/*
- jQuery.ajax({
- url: "jquery.cookie.js",
- dataType: "script",
- cache: true
- })
-* */
