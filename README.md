@@ -3,6 +3,8 @@ SinglePageApp1
 
 Example single-page app with jQuery and Knockout
 
+You can visit a live copy of it here: http://tageverything.org/github/SinglePageApp1
+
 I wrote this while experimenting with ways of making pages more modular.  It doesn't have to be used for a SPA though.
 You can lazy-load modals or other content that is not immediately viewable.  Even though the javascript is in external files
 it is difficult to debug because it is loaded and executed by jQuery anonymously.  I think before using this in a
