@@ -30,11 +30,17 @@ var ModuleManager = (function(){
         var d = $.Deferred();
         if(element)
         {
-            ko.cleanNode(element);
-            $.get('htmlFragments/'+htmlName+'.html', function( data ) {
-                $( element ).html( data );
+            $.ajax({
+                crossDomain: true,
+                url: 'htmlFragments/'+htmlName+'.html',
+                dataType: 'html',
+                cache: true
+            }).done(function( data ) {
+                ko.cleanNode(element);
+                element.html( data );
                 d.resolve();
             });
+
             return d;
         }
         d.reject();
