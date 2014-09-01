@@ -8,7 +8,8 @@
 <body>
     <script src="lib/jquery-2.1.1.js"></script>
     <script src="lib/knockout-3.2.0.js"></script>
-    <script src="js/module.js"></script>
+    <script src="js/moduleManager.js"></script>
+    <script src="js/modules/navigation.js"></script>
 
     <div id="centeredMainDiv">
         <div id="header"></div>
@@ -18,8 +19,8 @@
 
     <script>
         $(function(){
-            Module.loadHtml('header','header')
-            Module.loadHtml('navigation', 'navigation')
+            ModuleManager.load('Navigation');
+            ModuleManager.loadHtml('header','header')
         });
     </script>
 </body>

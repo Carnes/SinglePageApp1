@@ -5,14 +5,3 @@
         </li>
     </ul>
 </div>
-
-<script>
-    (function(){
-        var successCallback = function(){
-            ko.applyBindings(Navigation, $('#navigationTemplate').get(0));
-            Navigation.navTo(Navigation.items()[0]);
-        };
-
-        Module.loadScript('navigation').done(successCallback);
-    })();
-</script>

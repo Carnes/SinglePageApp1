@@ -7,7 +7,7 @@ var Navigation = (function(){
     ]);
 
     self.navTo = function(item){
-        Module.loadHtml(item.page, 'main');
+        ModuleManager.loadHtml(item.page, 'main');
     };
 
     return self;
