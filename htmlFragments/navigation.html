@@ -13,12 +13,6 @@
             Navigation.navTo(Navigation.items()[0]);
         };
 
-        $.ajax({
-            crossDomain: true,
-            url: 'js/navigation.js',
-            dataType: 'script',
-            cache: true,
-            success: successCallback
-        });
+        Module.loadScript('navigation').done(successCallback);
     })();
 </script>

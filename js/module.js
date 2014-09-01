@@ -15,5 +15,14 @@ var Module = (function(){
         return d;
     };
 
+    self.loadScript = function(scriptName) {
+        return $.ajax({
+            crossDomain: true,
+            url: 'js/'+scriptName+'.js',
+            dataType: 'script',
+            cache: true
+        });
+    };
+
     return self;
 })();
